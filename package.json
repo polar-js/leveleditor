@@ -1,0 +1,19 @@
+{
+  "name": "leveleditor",
+  "version": "0.1.0",
+  "description": "Level editor for the polar.js game engine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polar-js/leveleditor.git"
+  },
+  "author": "Alexander Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polar-js/leveleditor/issues"
+  },
+  "homepage": "https://github.com/polar-js/leveleditor#readme"
+}
