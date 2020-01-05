@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Level Editor</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <div class="editor">
+            <div class="column" id="left-column">
+                <div class="entity-list">
+                    <h2>Entities</h2>
+                    <ul>
+                        <li>Singletons</li>
+                        <li>Entity 1</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column resize-handle" id="resize-handle-left"></div>
+            <div class="column" id="center-column">
+                <canvas id="editor-canvas"></canvas>
+            </div>
+            <div class="column resize-handle" id="resize-handle-right"></div>
+            <div class="column" id="right-column">
+                
+
+
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <ul>
+                <li class="no-select">File<ul>
+                        <li class="no-select">New <span>Ctrl+N</span></li>
+                        <li class="no-select">Open <span>Ctrl+O</span></li>
+                        <li class="no-select">Save <span>Ctrl+S</span></li>
+                        <li class="no-select">Save As <span>Ctrl+Shift+S</span></li>
+                    </ul>
+                </li>
+
+                <li class="no-select">Edit<ul>
+                        <li class="no-select">Cut <span>Ctrl+X</span></li>
+                        <li class="no-select">Copy <span>Ctrl+C</span></li>
+                        <li class="no-select">Paste <span>Ctrl+V</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="status-bar no-select">
+            <span>Welcome to the Polar Level Editor!</span>
+        </div>
+
+        <script src="leveleditor.js"></script>
+    </body>
+</html>

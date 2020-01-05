@@ -1,19 +1,30 @@
 {
-  "name": "leveleditor",
-  "version": "0.1.0",
-  "description": "Level editor for the polar.js game engine.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/polar-js/leveleditor.git"
-  },
-  "author": "Alexander Brown",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/polar-js/leveleditor/issues"
-  },
-  "homepage": "https://github.com/polar-js/leveleditor#readme"
+    "name": "leveleditor",
+    "version": "0.1.0",
+    "description": "Level editor for the polar.js game engine.",
+    "main": "index.js",
+    "scripts": {
+        "serve": "npx serve public",
+        "watch": "npx webpack --env.NODE_ENV=local",
+        "build": "npx webpack -env.NODE_ENV=local --env.production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/polar-js/leveleditor.git"
+    },
+    "author": "Alexander Brown",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/polar-js/leveleditor/issues"
+    },
+    "homepage": "https://github.com/polar-js/leveleditor#readme",
+    "dependencies": {
+        "polarjs": "file:../polar.js"
+    },
+    "devDependencies": {
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.4",
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    }
 }
