@@ -1,6 +1,8 @@
 import * as Polar from 'polarjs';
 import { EditorLayer } from './EditorLayer';
 import { ResizeHandle } from './ResizeHandle';
+import { Toolbar } from './Toolbar';
+import { ToolbarItem, ToolbarExpander, ToolbarCommand, ToolbarRoot } from './ToolbarItem';
 
 class LevelEditor extends Polar.Application {
     constructor(settings: Polar.ApplicationSettings) {
@@ -17,7 +19,22 @@ class LevelEditor extends Polar.Application {
         const resizeHandleLeft = new ResizeHandle(resizeHandleLeftDiv, leftCol, centerCol, 50, window.innerWidth - 100);
         const resizeHandleRight = new ResizeHandle(resizeHandleRightDiv, centerCol, rightCol, 50, window.innerWidth - 100);
 
+        const toolbar = new Toolbar('toolbar');
+        const fileMenu = new ToolbarRoot('File');
+        const editMenu = new ToolbarRoot('Edit');
         
+        const openCommand = new ToolbarCommand('Open', ev => {
+            console.log('Open Works!');
+        }, 'Ctrl+O');
+        fileMenu.addChild(openCommand);
+
+        const saveCommand = new ToolbarCommand('Save', ev => {
+            console.log('Save Works!');
+        }, 'Ctrl+S');
+        fileMenu.addChild(saveCommand);
+
+        toolbar.addItem(fileMenu);
+        toolbar.addItem(editMenu);
     }
 }
 

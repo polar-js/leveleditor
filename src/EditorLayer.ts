@@ -6,7 +6,7 @@ export class EditorLayer extends Polar.Layer {
 
     public onAttach() {
 
-        this.manager = new Polar.WorldManager();
+        this.manager = new Polar.WorldManager(this.eventCallbackFn);
         
         //this.manager.addSingleton(new Polar.TextureLibraryCP([['pram', 'textures/pram.png']]));
 		this.manager.addSingleton(new Polar.CameraCP());
@@ -38,5 +38,9 @@ export class EditorLayer extends Polar.Layer {
 
     public onUpdate(deltaTime: number) {
         this.manager.onUpdate(deltaTime);
-    }
+	}
+	
+	public onEvent(event: Polar.Event) {
+		this.manager.onEvent(event);
+	}
 }

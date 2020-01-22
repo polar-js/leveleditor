@@ -119,6 +119,8 @@ a:hover {
 }
 
 .toolbar ul li ul {
+    background-color: #262626;
+    box-shadow: 5px 5px 5px #2222225F;
     position: absolute;
     height: auto;
     width: 250px;
